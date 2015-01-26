@@ -1,0 +1,23 @@
+#   Ensure the mysql2 gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+
+defaults: &defaults
+  adapter: mysql2
+  encoding: utf8
+  host: localhost
+  port: 3306
+  usernaem: root
+  password: "723241"
+
+development:
+  <<: *defaults
+  database: yun
+
+test:
+  <<: *defaults
+  database: yun_test
+
+production:
+  <<: *defaults
+  database: yun_production
